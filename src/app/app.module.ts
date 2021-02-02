@@ -17,7 +17,7 @@ import { SettingsComponent } from './settings/settings.component';
 import { AlltimesComponent } from './alltimes/alltimes.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { FielderrorsComponent } from './fielderrors/fielderrors.component';
-
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 const appRoutes: Routes = [
   { path: "", redirectTo: "/dashboard", pathMatch: "full" },
@@ -78,7 +78,9 @@ const appRoutes: Routes = [
     ConfirmDialogModule,
     GrowlModule,
     DragDropModule,
-    GalleriaModule
+    GalleriaModule,
+    PanelModule,
+    ScrollingModule,
   ],
   providers: [ ConfirmationService ],
   bootstrap: [AppComponent]
