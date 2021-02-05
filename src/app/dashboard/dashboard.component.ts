@@ -1,5 +1,6 @@
+
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
-import { UIChart } from "primeng/primeng";
+import { UIChart } from "primeng/chart";
 import {interval} from 'rxjs';
 
 

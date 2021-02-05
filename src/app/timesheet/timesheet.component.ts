@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MenuItem, TreeNode, ConfirmationService, Message } from "primeng/primeng";
+import { MenuItem, TreeNode, ConfirmationService, Message } from "primeng/api";
 import { SampleProjectsData } from "app/timesheet/sample.projects.data";
 import { SamplePeopleData } from "app/timesheet/sample.people.data";
 

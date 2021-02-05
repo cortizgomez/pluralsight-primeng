@@ -1,13 +1,14 @@
+import { ToastModule } from 'primeng/toast';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProfileComponent } from './profile.component';
-import {
-  DataTableModule, DragDropModule, FieldsetModule, GalleriaModule, GrowlModule,
-  PanelModule
-} from "primeng/primeng";
+
 import { NoopAnimationsModule } from "@angular/platform-browser/animations";
 import createSpy = jasmine.createSpy;
 import { By } from "@angular/platform-browser";
+import { GalleriaModule } from 'primeng/galleria';
+import { DragDropModule } from 'primeng/dragdrop';
+import { PanelModule } from 'primeng/panel';
 
 describe('ProfileComponent', () => {
   let component: ProfileComponent;
@@ -16,7 +17,7 @@ describe('ProfileComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ProfileComponent],
-      imports: [GrowlModule, GalleriaModule, DragDropModule, PanelModule, NoopAnimationsModule]
+      imports: [ToastModule, GalleriaModule, DragDropModule, PanelModule, NoopAnimationsModule]
     })
       .compileComponents();
   }));

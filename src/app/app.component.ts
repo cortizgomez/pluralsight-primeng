@@ -1,6 +1,7 @@
+
 import {Component, OnInit, ViewChild, ElementRef, AfterViewInit} from '@angular/core';
-import {MenuItem} from "primeng/primeng";
-import {Menu} from "primeng/components/menu/menu";
+import {MenuItem} from "primeng/api";
+import {Menu} from "primeng/menu";
 import {Router} from "@angular/router";
 
 declare var jQuery :any;

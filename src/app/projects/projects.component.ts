@@ -1,5 +1,5 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { FormBuilder, FormControl, FormGroup, Validators } from "@angular/forms";
 
 
 @Component({
@@ -32,9 +32,9 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit() {
     this.projectForm = this.fb.group({
-      projectId: ['', [Validators.required, Validators.minLength(5)]],
-      description: ['My cool project', [Validators.required, Validators.maxLength(140)]],
-      startDate: [new Date(), Validators.required],
+      projectId: [''/*, [Validators.required, Validators.minLength(5)]*/],
+      description: ['My cool project'/*, [Validators.required, Validators.maxLength(140)]*/],
+      startDate: [new Date(),/* Validators.required*/],
       projectType: ['B'],
       selectedDevs: [[]],
       rating: [3]

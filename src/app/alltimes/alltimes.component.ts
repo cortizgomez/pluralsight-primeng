@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MenuItem, DataTable, LazyLoadEvent } from "primeng/primeng";
+import { MenuItem,LazyLoadEvent } from 'primeng/api';
+import {DataView} from  'primeng/dataview'; 
 import { range } from 'rxjs';
 import Dexie from 'dexie';
 
@@ -12,7 +13,7 @@ const MAX_EXAMPLE_RECORDS = 1000;
 })
 export class AlltimesComponent implements OnInit {
 
-  @ViewChild("dt") dt : DataTable;
+  @ViewChild("dt") dt : DataView;
 
   db: Dexie;
 
@@ -120,7 +121,7 @@ export class AlltimesComponent implements OnInit {
         function () {
           console.log("Do complete");
           that.dt.loading = false;
-          that.dt.reset();
+          that.dt.value = null;
           console.log("Finished Reset database");
           that.getRecordCount().then((count) => {
             that.recordCount = count;
